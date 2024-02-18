@@ -21,7 +21,7 @@ QUESTION 1: 840402
 
 SELECT COUNT(VendorID) 
 FROM `elaborate-tube-412620.taxi_rides_ny.external_green_tripdata` 
-LIMIT 10
+LIMIT 10;
 
 QUESTION 2: 0 MB and 6.41 MB
 
@@ -41,8 +41,7 @@ WHERE fare_amount = 0;
 QUESTION 4: 
 
 CREATE OR REPLACE TABLE elaborate-tube-412620.taxi_rides_ny.external_green_partitioned
-PARTITION BY 
-DATE(cln_pickup_datetime)
+PARTITION BY DATE(cln_pickup_datetime)
 CLUSTER BY PULocationID AS 
 SELECT *, 
 TIMESTAMP_MICROS(CAST(lpep_pickup_datetime / 1000 AS INT64)) AS cln_pickup_datetime,

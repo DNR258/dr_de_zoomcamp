@@ -7,10 +7,10 @@ if 'data_exporter' not in globals():
 
 os.environ['GOOGLE_APPLICATION_CREDENTIALS']='/home/src/my-creds.json'
 
-bucket_name='dr-de-zoomcamp-98'
+bucket_name='ny-taxi-datalake-88'
 project_id='elaborate-tube-412620'
 
-table_name='green_taxi_2022'
+table_name='green_taxi'
 
 root_path= f'{bucket_name}/{table_name}'
 
